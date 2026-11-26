@@ -1,66 +1,114 @@
 
 <div align="center">
 
-# 🔎 CampusFind
+# 🔎CampusFIND
 
-### Intelligent College Lost & Found Portal
+### INTELLIGENT COLLEGE LOST & FOUND PORTAL
 
-*Lost. Found. Reunited.*
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=20&duration=2500&pause=700&color=00D9FF&center=true&vCenter=true&width=600&lines=Lost+something%3F;Find+it+with+CampusFind!;Smart+Matching+%7C+Secure+Recovery" alt="Animated typing text" />
 
-A smart and secure platform to help students recover their lost belongings through intelligent item matching and ownership verification.
+<br>
 
-![Python](https://img.shields.io/badge/Python-3.10+-blue?logo=python)
-![FastAPI](https://img.shields.io/badge/FastAPI-Backend-009688?logo=fastapi)
-![Supabase](https://img.shields.io/badge/Supabase-Database-3FCF8E?logo=supabase)
-![Project](https://img.shields.io/badge/Project-Individual-orange)
+**Lost. Found. Reunited.**
+
+A smarter way to reconnect students with their lost belongings.
+
+<br>
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
+![Supabase](https://img.shields.io/badge/Supabase-3FCF8E?style=for-the-badge&logo=supabase&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 
 </div>
 
 ---
 
-## 📌 About
+## ⚡ What is CampusFind?
 
-CampusFind is a college lost and found portal that connects students with their lost belongings.
+Ever lost something on campus and had no idea where to look?
 
-It allows students to report lost or found items, receive possible match suggestions, and verify ownership before collecting an item.
+**CampusFind is here to change that.**
 
-The system protects private item details and provides an administrator-controlled recovery process.
+A centralized lost and found platform that helps students report missing belongings, discover possible matches, and recover their items through secure ownership verification.
 
-## ✨ Features
+No more endless searching. No more guessing.
 
-- 👤 Student registration and login
-- 🔍 Lost and found item reporting
-- 📸 Item photo upload and camera capture
-- 🤖 Intelligent item matching
-- 🔐 Private ownership verification
-- 📋 Claim tracking and admin approval
-- 🔔 Email notifications and password reset
-- 🛡️ Secure administrator dashboard
+Just a smarter way to find what matters.
 
-## 🔄 How It Works
+---
+
+## 🚀 Features That Make It Different
+
+<table>
+<tr>
+<td width="50%">
+
+### 🔍 Smart Item Matching
+
+Find possible matches between lost and found reports using item information.
+
+### 📸 Easy Reporting
+
+Report lost or found belongings with item details and photographs.
+
+### 🔐 Ownership Verification
+
+Protect found items with private verification details.
+
+</td>
+<td width="50%">
+
+### 👤 Student Portal
+
+Register, log in, manage reports, and track claims.
+
+### 🛡️ Admin Control
+
+Manage found items, review claims, and approve item returns.
+
+### 🔔 Notifications
+
+Receive updates about claims and recovery progress.
+
+</td>
+</tr>
+</table>
+
+---
+
+## 🧠 How CampusFind Works
 
 ```mermaid
 flowchart TD
-    A[Report Lost Item] --> C[Item Matching]
-    B[Report Found Item] --> D[Admin Registers Item]
-    D --> C
-    C --> E[Possible Match]
-    E --> F[Submit Claim]
-    F --> G[Ownership Verification]
-    G --> H[Admin Review]
-    H --> I[Item Returned]
+    A(["🔍 Lost Something?"]) --> B["Report Lost Item"]
+    C(["📦 Found Something?"]) --> D["Report Found Item"]
+    D --> E["Admin Registers Item"]
+    B --> F["Smart Matching"]
+    E --> F
+    F --> G{"Possible Match?"}
+    G -->|Yes| H["Submit Ownership Claim"]
+    G -->|No| I["Keep Searching"]
+    I --> F
+    H --> J["Ownership Verification"]
+    J --> K["Admin Approval"]
+    K --> L(["🎉 Item Returned"])
 ```
 
-## 🛠️ Technology Stack
+---
 
-| Component | Technology |
+## 🛠️ Built With
+
+| Technology | Purpose |
 |---|---|
-| Frontend | HTML, CSS, JavaScript |
-| Backend | Python, FastAPI |
-| Database | Supabase PostgreSQL |
-| Local Database | SQLite |
-| Authentication | JWT |
-| Password Security | Bcrypt |
+| HTML, CSS, JavaScript | Frontend |
+| Python, FastAPI | Backend |
+| Supabase PostgreSQL | Cloud Database |
+| SQLite | Local Database |
+| JWT | Authentication |
+| Bcrypt | Password Security |
+
+---
 
 ## 📂 Project Structure
 
@@ -76,27 +124,22 @@ campusfind/
 │   ├── verification.py
 │   ├── emailer.py
 │   └── requirements.txt
+│
 ├── frontend/
 │   ├── index.html
-│   ├── css/style.css
+│   ├── css/
+│   │   └── style.css
 │   └── js/
 │       ├── api.js
 │       └── app.js
-├── database/
-│   └── schema.sql
-├── prototype/
-│   └── campusfind-demo.html
-├── .env.example
-└── README.md
+│
+└── database/
+    └── schema.sql
 ```
 
-## 🚀 Getting Started
+---
 
-### Prerequisites
-
-- Python 3.10 or newer
-- Visual Studio Code
-- Web browser
+## 💻 Get Started
 
 ### 1. Clone the Repository
 
@@ -123,28 +166,20 @@ venv\Scripts\activate
 pip install -r backend/requirements.txt
 ```
 
-### 4. Configure Environment
+### 4. Configure Your Database
 
-Copy `.env.example` into the `backend` folder and rename it to `.env`.
+Configure your database connection in the backend settings.
 
-Add your secret key and administrator email.
+For Supabase, create a project and configure its PostgreSQL connection. Use `database/schema.sql` to set up the database tables.
 
-```env
-DATABASE_URL=
-SECRET_KEY=your_secret_key
-ADMIN_EMAILS=your_email@example.com
-```
-
-Leave `DATABASE_URL` empty to use SQLite locally.
-
-### 5. Run the Application
+### 5. Run CampusFind
 
 ```bash
 cd backend
 uvicorn main:app --reload
 ```
 
-Open the application:
+Open your browser:
 
 **http://localhost:8000**
 
@@ -152,53 +187,32 @@ API documentation:
 
 **http://localhost:8000/docs**
 
-## 🗄️ Database Setup
+---
 
-CampusFind supports SQLite for local development and Supabase PostgreSQL for cloud storage.
+## 🔮 What's Next?
 
-To connect Supabase:
-
-1. Create a Supabase project.
-2. Copy your PostgreSQL connection string.
-3. Add it to `DATABASE_URL` in `backend/.env`.
-4. Start the backend.
-
-The application creates the required tables automatically.
-
-## 🔐 Security
-
-- Passwords are stored as hashes.
-- JWT authentication protects user accounts.
-- Found item details remain private.
-- Ownership verification protects against false claims.
-- Administrator approval controls item recovery.
-
-## 🔮 Future Enhancements
-
-- AI-based image matching
-- QR code item identification
-- Mobile application
-- College ID integration
-- Secure cloud image storage
+- 🤖 AI-powered image matching
+- 📱 Mobile application
+- 🏷️ QR-based item identification
+- 🎓 College ID integration
+- ☁️ Secure cloud image storage
 
 ---
 
 <div align="center">
 
-## 👩‍💻 Project Developer
+## 👩‍💻 Created By
 
-**Johara Shaikh**
+### Johara Shaikh
 
-*Individual Project*
+**Individual Project**
 
-**CampusFind — Intelligent College Lost & Found Portal**
+*CampusFind — Intelligent College Lost & Found Portal*
 
-</div>
+<br>
 
----
+### 💙 Lost Today. Found Tomorrow.
 
-<div align="center">
-
-*Making lost belongings easier to find and return.*
+*Making campus recovery smarter, one item at a time.*
 
 </div>
